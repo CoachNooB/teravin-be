@@ -18,7 +18,7 @@ const routes = [
     },
     {
         method: 'DELETE',
-        path: '/users',
+        path: '/users/{id}',
         handler: deleteEmployeeHandler
     },
 ]

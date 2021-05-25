@@ -9,7 +9,7 @@ const getAllEmployeeHandler = () => ({
 });
 
 const addEmployeeHandler = (req, h) => {
-    const { name, email, mobile, birthdate, address } = req.payload;
+    const { name, email, mobile, birthday, address } = req.payload;
 
     if(!name) {
         const res = h.response({
@@ -49,7 +49,7 @@ const addEmployeeHandler = (req, h) => {
         name,
         email,
         mobile,
-        birthdate,
+        birthday,
         address,
     }
     Employee.push(newEmployee);
@@ -77,7 +77,7 @@ const addEmployeeHandler = (req, h) => {
 
 const editEmployeeHandler = (req, h) => {
     const { id } = req.params;
-    const { name, email, mobile, birthdate, address } = req.payload;
+    const { name, email, mobile, birthday, address } = req.payload;
 
     if(!name) {
         const res = h.response({
@@ -105,7 +105,7 @@ const editEmployeeHandler = (req, h) => {
             name,
             email,
             mobile,
-            birthdate,
+            birthday,
             address,
         }
 
